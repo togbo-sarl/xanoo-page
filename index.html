@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargement Application</title>
+    <style>
+        :root {
+            --indigo: #1a237e;
+            --indigo-light: #534bae;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: var(--indigo);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: var(--white);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .download-section {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .download-section:hover {
+            transform: translateY(-2px);
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: var(--indigo);
+            color: var(--white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .download-button:hover {
+            background-color: var(--indigo-light);
+        }
+
+        .version-tag {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: var(--indigo);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .instructions {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--indigo);
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <svg class="logo" viewBox="0 0 100 100">
+            <!-- Version simplifiée de votre logo en SVG -->
+            <rect x="20" y="30" width="20" height="40" fill="white" transform="rotate(-10 20 30)"/>
+            <rect x="45" y="30" width="20" height="40" fill="white" transform="rotate(-5 45 30)"/>
+            <rect x="70" y="30" width="20" height="40" fill="white" transform="rotate(0 70 30)"/>
+        </svg>
+        <h1>Téléchargement de l'Application</h1>
+    </div>
+
+    <div class="container">
+        <div class="download-section">
+            <span class="version-tag">Version 1.0.0</span>
+            <h2>Application Mobile</h2>
+            <p>Téléchargez la dernière version de notre application Android</p>
+            <a href="resources/xanoo.apk" class="download-button">Télécharger l'APK</a>
+        </div>
+
+        <div class="download-section">
+            <span class="version-tag">Version 1.0.0</span>
+            <h2>Programme d'installation Windows</h2>
+            <p>Téléchargez la version bureau de notre application</p>
+            <a href="resources/XanooSetup.exe" class="download-button">Télécharger le Setup</a>
+        </div>
+
+        <div class="instructions">
+            <h2>Instructions d'installation</h2>
+            
+            <h3>Android</h3>
+            <ol>
+                <li>Téléchargez le fichier APK</li>
+                <li>Ouvrez le fichier téléchargé</li>
+                <li>Autorisez l'installation depuis des sources inconnues si demandé</li>
+                <li>Suivez les instructions d'installation</li>
+            </ol>
+
+            <h3>Windows</h3>
+            <ol>
+                <li>Téléchargez le programme d'installation</li>
+                <li>Exécutez le fichier setup.exe</li>
+                <li>Suivez les instructions d'installation</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
