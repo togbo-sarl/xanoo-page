@@ -55,6 +55,35 @@
             transform: translateY(-2px);
         }
 
+        .download-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .download-info {
+            flex: 1;
+        }
+
+        .qr-code-container {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 0.5rem;
+        }
+
+        .qr-code-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
         .download-button {
             display: inline-block;
             background-color: var(--indigo);
@@ -92,12 +121,21 @@
             color: var(--indigo);
             margin-top: 0;
         }
+
+        @media (max-width: 768px) {
+            .download-content {
+                flex-direction: column;
+            }
+            
+            .qr-code-container {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <svg class="logo" viewBox="0 0 100 100">
-            <!-- Version simplifiée de votre logo en SVG -->
             <rect x="20" y="30" width="20" height="40" fill="white" transform="rotate(-10 20 30)"/>
             <rect x="45" y="30" width="20" height="40" fill="white" transform="rotate(-5 45 30)"/>
             <rect x="70" y="30" width="20" height="40" fill="white" transform="rotate(0 70 30)"/>
@@ -109,8 +147,16 @@
         <div class="download-section">
             <span class="version-tag">Version 1.0.0</span>
             <h2>Application Mobile</h2>
-            <p>Téléchargez la dernière version de notre application Android</p>
-            <a href="resources/xanoo.apk" class="download-button">Télécharger l'APK</a>
+            <div class="download-content">
+                <div class="download-info">
+                    <p>Téléchargez la dernière version de notre application Android</p>
+                    <a href="resources/xanoo.apk" class="download-button">Télécharger l'APK</a>
+                </div>
+                <div class="qr-code-container">
+                    <img src="assets/images/qrcode.png" width="150" alt="QR Code pour télécharger l'APK" class="qr-code">
+                    <p class="qr-code-text">Scannez pour télécharger</p>
+                </div>
+            </div>
         </div>
 
         <div class="download-section">
@@ -125,7 +171,7 @@
             
             <h3>Android</h3>
             <ol>
-                <li>Téléchargez le fichier APK</li>
+                <li>Téléchargez le fichier APK (via le bouton ou le QR code)</li>
                 <li>Ouvrez le fichier téléchargé</li>
                 <li>Autorisez l'installation depuis des sources inconnues si demandé</li>
                 <li>Suivez les instructions d'installation</li>
